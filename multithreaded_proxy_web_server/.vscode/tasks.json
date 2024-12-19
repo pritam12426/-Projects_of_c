@@ -1,0 +1,62 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Run cpp code",
+      "command": "${workspaceFolder}/main.out",
+      "args": [
+        "<",
+        "${workspaceFolder}/input.txt"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": "Build CPP Binary"
+    },
+    {
+      "type": "shell",
+      "label": "Build CPP Binary",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=gnu++2b",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-Wall",
+        "-pedantic",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/main.out"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "detail": "compiler: CPP Code With Apple Clang++",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Debug cpp program",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=gnu++2b",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-Wall",
+        "-pedantic",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/main.out"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "group": "build",
+      "detail": "Debugging: Cpp Program Using lldb"
+    }
+  ]
+}
