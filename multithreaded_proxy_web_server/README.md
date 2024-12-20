@@ -6,9 +6,7 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href 
 ## Index
 
 - [Project Theory](https://github.com/Lovepreet-Singh-LPSK/MultiThreadedProxyServerClient#project-theory)
-- [How to Run](https://github.com/Lovepreet-Singh-LPSK/MultiThreadedProxyServerClient#How-to-Run)
 - [Demo](https://github.com/Lovepreet-Singh-LPSK/MultiThreadedProxyServerClient#Demo)
-- [Contributing](https://github.com/Lovepreet-Singh-LPSK/MultiThreadedProxyServerClient#contributing)
 
 ## Project Theory
 
@@ -55,14 +53,3 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href 
 
 # Note :-
 - Code is well commented. For any doubt you can refer to the comments.
-
-
-## How to Run
-
-```bash
-$ git clone https://github.com/Lovepreet-Singh-LPSK/MultiThreadedProxyServerClient.git
-$ cd MultiThreadedProxyServerClient
-$ make all
-$ ./proxy <port no.>
-```
-`Open http://localhost:port/https://www.cs.princeton.edu/`
