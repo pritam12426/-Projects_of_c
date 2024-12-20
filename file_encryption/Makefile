@@ -3,10 +3,10 @@ OPT = -O3 -Wall -std=c++20
 all: build run
 
 build: src/main.cpp
-	$(CXX) $(OPT) $< -o main
+	$(CXX) $(OPT) $< -o build/main
 
-run: main
-	./main
+run: build/main
+	./build/main
 
 clean:
-	rm -f main
+	rm -f build/main
